@@ -6,12 +6,12 @@ const productSchema =
   mongoose.Schema({
       code:Number,
       size:String,
-      price:Number
+      price:Number,
 }); 
 const ProductModel = mongoose.model("p2",productSchema);//model name 
 //then, schema name
 
-//data => jis data ki validation krni ha
+
 //@hapi/joi use here
 function validateProduct(data) {
     const schema = Joi.object({

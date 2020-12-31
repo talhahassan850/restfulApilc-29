@@ -55,7 +55,8 @@ router.delete("/:id", async (req, res) => {
   });
 
   //Insert a record  validateProduct, //auth,
-router.post("/",validateProduct,  async (req, res) => {
+  router.post("/",validateProduct,  async (req, res) => {
+
     /*let {error} = validate(req.body);
     if(error)
     {
@@ -67,6 +68,7 @@ router.post("/",validateProduct,  async (req, res) => {
     product.code = req.body.code;
     product.price = req.body.price;
     product.size = req.body.size;
+    product.link = req.body.link;
     await product.save();
     return res.send(product);
   });
