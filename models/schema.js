@@ -7,6 +7,7 @@ const productSchema =
       code:Number,
       size:String,
       price:Number,
+      image:String,
 }); 
 const ProductModel = mongoose.model("p2",productSchema);//model name 
 //then, schema name
@@ -18,6 +19,7 @@ function validateProduct(data) {
       code: Joi.number().min(0).required(),
       price: Joi.number().min(0).required(),
       size: Joi.string().min(1).max(10).required(),
+      image: Joi.string().required(),
     });
     return schema.validate(data, { abortEarly: false });
   }

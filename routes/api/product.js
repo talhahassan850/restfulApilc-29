@@ -44,6 +44,7 @@ router.put("/:id",validateProduct, async (req, res) => {
     product.code = req.body.code;
     product.price = req.body.price;
     product.size = req.body.size;
+    product.image = req.body.image;
     await product.save();
     return res.send(product);
   });
@@ -68,7 +69,7 @@ router.delete("/:id", async (req, res) => {
     product.code = req.body.code;
     product.price = req.body.price;
     product.size = req.body.size;
-    product.link = req.body.link;
+    product.image = req.body.image;
     await product.save();
     return res.send(product);
   });
